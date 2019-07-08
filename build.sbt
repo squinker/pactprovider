@@ -3,8 +3,6 @@ val CirceVersion = "0.11.1"
 val Specs2Version = "4.1.0"
 val LogbackVersion = "1.2.3"
 
-import com.itv.scalapact.plugin._
-
 enablePlugins(ScalaPactPlugin)
 
 lazy val root = (project in file("."))
@@ -14,22 +12,22 @@ lazy val root = (project in file("."))
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "2.12.8",
     libraryDependencies ++= Seq(
-      "org.http4s"      %% "http4s-blaze-server" % Http4sVersion,
-      "org.http4s"      %% "http4s-blaze-client" % Http4sVersion,
-      "org.http4s"      %% "http4s-circe"        % Http4sVersion,
-      "org.http4s"      %% "http4s-dsl"          % Http4sVersion,
-      "io.circe"        %% "circe-generic"       % CirceVersion,
-      "org.specs2"      %% "specs2-core"         % Specs2Version % "test",
-      "ch.qos.logback"  %  "logback-classic"     % LogbackVersion,
+      "org.http4s" %% "http4s-blaze-server" % Http4sVersion,
+      "org.http4s" %% "http4s-blaze-client" % Http4sVersion,
+      "org.http4s" %% "http4s-circe" % Http4sVersion,
+      "org.http4s" %% "http4s-dsl" % Http4sVersion,
+      "io.circe" %% "circe-generic" % CirceVersion,
+      "org.specs2" %% "specs2-core" % Specs2Version % "test",
+      "ch.qos.logback" % "logback-classic" % LogbackVersion,
 
 
-      "com.itv"       %% "scalapact-circe-0-9"     % "2.3.8" % "test",
-      "com.itv"       %% "scalapact-http4s-0-18"   % "2.3.8" % "test",
-      "com.itv"       %% "scalapact-scalatest"     % "2.3.8" % "test",
-      "org.scalatest" %% "scalatest"               % "3.0.5" % "test"
+      "com.itv" %% "scalapact-circe-0-9" % "2.3.8" % "test",
+      "com.itv" %% "scalapact-http4s-0-18" % "2.3.8" % "test",
+      "com.itv" %% "scalapact-scalatest" % "2.3.8" % "test",
+      "org.scalatest" %% "scalatest" % "3.0.5" % "test"
     ),
-    addCompilerPlugin("org.typelevel" %% "kind-projector"     % "0.10.3"),
-    addCompilerPlugin("com.olegpy"    %% "better-monadic-for" % "0.3.0")
+    addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.10.3"),
+    addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.0")
   )
 
 scalacOptions ++= Seq(
